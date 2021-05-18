@@ -1,23 +1,40 @@
-import java.io.*;
-
 public class Savings extends Account
-
-float interest;
-
-Savings(int no,float i)
-
-   super(no);
-
-   interest = i;
-
-public void getAccno()
-
-   System.out.println(\n\nSaving Account Information);
-
-   System.out.println(\nAccount number is : +accno);
-
-public void getBal()
-
-   System.out.println(\nThe balance is : +accbal);
-
-   System.out.println(\nThe rate of interest is : +interest+%);
+{
+	private double interestRate;
+	
+	public Savings(int accountNumber, double interest)
+	{
+		super(accountNumber);
+		setInterestRate(interest);
+	}
+	
+	public void setInterestRate(double interest)
+	{
+		interestRate = interest;
+	}
+	public double getInterestRate()
+	{
+		return interestRate;
+	}
+	
+	public int getAccountNumber()
+	{
+		return accountNumber;
+	}
+	
+	public double getBalance()
+	{
+		return balance;
+	}
+	
+	/*
+	 * I was unsure what it meant by "[...] the get method displays the String
+	 * [...]" so I assumed that putting that in the two get methods made no sense
+	 * and opted to do the following. In this situation I feel like the following
+	 * could be added to the abstract as an empty method to force its creation.
+	 */
+	public String getAccountInfo()
+	{
+		return("Savings Account Information\nAccount Number: " + getAccountNumber() + "\nBalance: " + getBalance() + "\nInterest Rate: " + getInterestRate() + "%");
+	}
+}
