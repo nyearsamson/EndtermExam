@@ -1,22 +1,27 @@
-public abstract class Account
-{
-	protected int accountNumber;
-	protected double balance;
-	
-	public Account(int acctNum)
-	{
-		accountNumber = acctNum;
-		setBalance(0.0);
-	}
-	
-	public void setBalance(double b)
-	{
-		balance = b;
-	}
-	
-	public abstract int getAccountNumber();
-	public abstract double getBalance();
-	
-	// Added this because it makes sense with my current application design
-	public abstract String getAccountInfo();
-}
+public abstract class Account {
+
+   private int accountNo;
+
+   private double accountBalance;
+
+   public Account(int accNo){
+
+    this.accountNo = accNo;
+
+    accountBalance = 0.0;
+   }
+   public int getAccountNo()
+   {
+     return accountNo;
+   }
+   public double getAccountBalance() 
+   {
+   return accountBalance;
+   }
+   public void setAccountBalance(double accountBalance)
+   {
+   this.accountBalance = accountBalance;
+   }
+   public abstract String getAccountDetails();
+   }
+  
