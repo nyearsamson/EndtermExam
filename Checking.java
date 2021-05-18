@@ -1,17 +1,28 @@
-import java.io.*;
-
 public class Checking extends Account
-
-Checking(int no)
-
-   super(no);
-
-public void getAccno()
-
-   System.out.println(\n\nChecking Account Information);
-
-   System.out.println(\nAccount number is : +accno);
-
-public void getBal()
-
-   System.out.println(\nThe balance is : +accbal);
+{
+	public Checking(int accountNumber)
+	{
+		super(accountNumber);
+	}
+	
+	public int getAccountNumber()
+	{
+		return accountNumber;
+	}
+	
+	public double getBalance()
+	{
+		return balance;
+	}
+	
+	/*
+	 * I was unsure what it meant by "[...] the get method displays the String
+	 * [...]" so I assumed that putting that in the two get methods made no sense
+	 * and opted to do the following. In this situation I feel like the following
+	 * could be added to the abstract as an empty method to force its creation.
+	 */
+	public String getAccountInfo()
+	{
+		return("Checking Account Information\nAcct Num: " + getAccountNumber() + "\nBalance: " + getBalance());
+	}
+}
