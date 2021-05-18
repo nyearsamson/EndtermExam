@@ -1,22 +1,19 @@
-public class AccountArray
-{
-	public static void main(String[] args)
-	{
-		Account[] accountArray = new Account[10];
-		
-		accountArray[0] = new Checking(11);
-		accountArray[1] = new Checking(12);
-		accountArray[2] = new Checking(13);
-		accountArray[3] = new Checking(14);
-		accountArray[4] = new Checking(15);
-		accountArray[5] = new Savings(21, 1.0);
-		accountArray[6] = new Savings(22, 1.1);
-		accountArray[7] = new Savings(23, 1.2);
-		accountArray[8] = new Savings(24, 1.3);
-		accountArray[9] = new Savings(25, 1.4);
-		
-		// Outputing this much info is less intrusive at the console
-		for(int i = 0; i < accountArray.length; ++i)
-			System.out.println(accountArray[i].getAccountInfo() + "\n");
-	}
+public class AccountUnitTest {
+
+   public static void main(String arg[]){
+
+       Account acc1 = new Checking(1001);
+
+       acc1.setAccountBalance(1000);
+
+       Account acc2 = new Savings(2001, 8.5);
+
+       acc2.setAccountBalance(2000);
+
+       System.out.println(acc1.getAccountDetails());
+
+       System.out.println(acc2.getAccountDetails());
+
+   }
+
 }
